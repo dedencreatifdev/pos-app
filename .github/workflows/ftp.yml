@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: creatif.web.id
+        server: ftp.creatif.web.id
         username: u349378717
         password: Adzka@2024
