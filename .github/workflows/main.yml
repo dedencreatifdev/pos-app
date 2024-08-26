@@ -1,0 +1,17 @@
+name: Deploy via ftp
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Upload deploy
+      uses: HimoSoft/himosoft-ftp-deploy@releases/v1.1.0
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
